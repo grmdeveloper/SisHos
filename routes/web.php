@@ -28,3 +28,6 @@ Route::resource('unidadeespecializacao', 'UnidadeEspecializacaoController');
 Route::get('getUnidades', 'UnidadeEspecializacaoController@getUnidades');
 Route::get('getDados/{u}',    'UnidadeEspecializacaoController@getDados');
 
+Route::get('getesp', 'UnidadeEspecializacaoController@getEsp');
+Route::get('getuni/{u}', 'UnidadeEspecializacaoController@getUni');
+

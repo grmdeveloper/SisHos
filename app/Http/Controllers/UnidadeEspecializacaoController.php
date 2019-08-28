@@ -41,17 +41,85 @@ class UnidadeEspecializacaoController extends Controller
 
         return redirect(url('/unidadeespecializacao'));
     }
-
+/*
     public function getUnidades(){
 		$unidades = Unidades::all();
 		return response()->json($unidades);
 	}
 
-	 public function getDados($u){
+	public function getDados($u){
+        
+        $a = UnidadeEspecializacao::with('unidade','especializacao')->where('unidade_id','=',$u)->get();
 
-        $a = UnidadeEspecializacao::with('unidade','especializacao')->where('unidade_id','=',$u)->get();    
+        $especialidades_array=[];
+        $qnt_vagas=[];
+        
+        $ultima_especialidade=null; // valera para o loop subsequente
+        
+        foreach($a as $vaga){
+            $esp = $vaga->especializacao->nome;
 
-        return response()->json($a);
+            //primeiro loop
+            if(empty($especialidades_array)){
+                $x=0;
+                $ultima_especialidade=$esp;
+                
+                $especialidades_array[]=$esp;
+                $qnt_vagas[0]=1;
+            }
+      
+            else{  
+
+                //se manter
+                if($ultima_especialidade==$esp){ 
+                    $qnt_vagas[$x]++;
+                }
+                
+                // se mudar
+                else{ 
+                    $x++;
+                    $qnt_vagas[$x]=1;
+                    $especialidades_array[]=$esp;
+                    $ultima_especialidade=$esp;
+                }
+            }
+        }
+
+        return response()->json(["especialidades"=>$especialidades_array,"qnt_vagas"=>$qnt_vagas]);
 		
 	}
+*/
+
+    function getEsp(){
+        $a = Especializacoes::all();
+        return response()->json($a);
+    }
+
+    function getUni($e){
+        $esp = Especializacoes::where('nome','=',$e)->get()->first();
+        $espId=$esp->id;
+        $a = UnidadeEspecializacao::with('unidade','especializacao')->where('especializacao_id','=',$espId)->get();
+        $b=[];
+        $x=0;
+        foreach($a as $vaga){
+            $b[$x]['nome']=$vaga->unidade->nome;
+            $b[$x]['endereco']=$vaga->unidade->endereco;
+            $x++;
+        }
+
+        return response()->json($b);
+    }
+
+
+    function getVagas($uni,$esp){
+
+        $esp = Especializacoes::where('nome',$esp)->get();
+
+        $a = UnidadeEspecializacao::with('unidade','especializacao')
+            ->where('unidade_id','=',$uni)
+                ->where('especializacao_id','=',$esp->id)
+                    ->get();
+
+        return response()->json($a);
+    }
 }
