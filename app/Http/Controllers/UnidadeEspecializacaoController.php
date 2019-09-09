@@ -41,7 +41,7 @@ class UnidadeEspecializacaoController extends Controller
 
         return redirect(url('/unidadeespecializacao'));
     }
-/*
+
     public function getUnidades(){
 		$unidades = Unidades::all();
 		return response()->json($unidades);
@@ -88,7 +88,6 @@ class UnidadeEspecializacaoController extends Controller
         return response()->json(["especialidades"=>$especialidades_array,"qnt_vagas"=>$qnt_vagas]);
 		
 	}
-*/
 
     function getEsp(){
         $a = Especializacoes::all();
