@@ -94,8 +94,8 @@ class UnidadeEspecializacaoController extends Controller
         return response()->json($a);
     }
 
-    function getUni($e){
-        $esp = Especializacoes::where('nome','=',$e)->get();
+    function getUni($especializacao_nome){
+        $esp = Especializacoes::where('nome','=',$especializacao_nome)->get();
 
         $xe=0;
         foreach($esp as $e){
