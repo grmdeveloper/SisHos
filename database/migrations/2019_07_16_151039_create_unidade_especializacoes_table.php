@@ -17,9 +17,6 @@ class CreateUnidadeEspecializacoesTable extends Migration
             $table->increments('id');
             $table->integer('unidade_id')->unsigned();
             $table->integer('especializacao_id')->unsigned();
-            $table->string('descricao');
-            $table->boolean('status') ->default(false);
-            
             $table->foreign('unidade_id')->references('id')->on('unidades')->onDelete('cascade');
             $table->foreign('especializacao_id')->references('id')->on('especializacoes')->onDelete('cascade');
             $table->timestamps();
