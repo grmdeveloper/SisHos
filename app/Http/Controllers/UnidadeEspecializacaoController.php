@@ -97,7 +97,7 @@ class UnidadeEspecializacaoController extends Controller
     function getUni($e){
         $esp = Especializacoes::where('nome','=',$e)->get()->first();
         $espId=$esp->id;
-        $a = UnidadeEspecializacao::with('unidade','especializacao')->where('especializacao_id','=',$espId)->get()->distinct();
+        $a = UnidadeEspecializacao::with('unidade','especializacao')->where('especializacao_id','=',$espId)->get();
         $b=[];
         $x=0;
         foreach($a as $vaga){
