@@ -898,7 +898,7 @@ class UnidadeEspecializacoesTableSeeder extends Seeder
             array (
                 'id' => 111,
                 'unidade_id' => 17,
-                'especializacao_id' => 47,
+                'especializacao_id' => 46,
                 'created_at' => '2019-09-16 14:39:11',
                 'updated_at' => '2019-09-16 14:39:11',
             ),
