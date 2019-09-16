@@ -35,6 +35,7 @@ class EspecializacoesTableSeeder extends Seeder
         DB::table('especializacoes')->insert(['nome' => 'Médico Infectologista']);
         DB::table('especializacoes')->insert(['nome' => 'Médico Ortopedista E Traumatologista']);
         DB::table('especializacoes')->insert(['nome' => 'Psicólogo Clínico']);
+        DB::table('especializacoes')->insert(['nome' => 'empty' ]);
         DB::table('especializacoes')->insert(['nome' => 'Médico Da Estratégia De Saúde Da Família' ]);
         DB::table('especializacoes')->insert(['nome' => 'Profissional De Educação Física Na Saúde' ]);
         DB::table('especializacoes')->insert(['nome' => 'Farmacêutico' ]);
