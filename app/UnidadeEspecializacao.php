@@ -10,10 +10,7 @@ class UnidadeEspecializacao extends Model
 
     protected $fillable = [
         'unidade_id',
-        'especializacao_id',
-        'descricao',
-        'status',
-    
+        'especializacao_id',    
     ];
     
     public function unidade()

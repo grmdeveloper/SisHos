@@ -8,16 +8,9 @@
                <form action="{{ url('/unidadeespecializacao')}}" method="POST" id="form">
                   {{ csrf_field() }}
 
-
-                  <div class="input-group input-group-sm mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroup-sizing-sm">Descrição</span>
-                        </div>
-                        <input name="descricao" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                      </div>
-
+      
                   <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+                        <label class="input-group-text" for="inputGroupSelect01">Selecione a Unidade</label>
                       </div>
                       <div>
                       <select name="unidade_id" class="custom-select" id="inputGroupSelect01">
@@ -32,16 +25,12 @@
                         <label class="input-group-text" for="inputGroupSelect01">Especializações</label>
                       </div>
                       <div>
-                      <select name="especializacao_id" class="custom-select" id="inputGroupSelect01">
-                        <option selected>Choose...</option>
+                    
                         @foreach ($especias as $especia)
-                           <option value="{{$especia->id}}">{{$especia->nome}} </option>  
+                          <label class='form-control' style='max-width:30%; display:inline-block; height:80px; vertical-align: top;'> {{$especia->nome}}
+                            <input type='checkbox' name="especializacao_id[]" value='{{$especia->id}}'>
+                          </label>
                         @endforeach
-                      </select>
-                    </div>
-                    <div>
-                       <label>Quantidade de vagas</label>
-                       <input name="qtd_vagas" type="number" min="1">
                     </div>
 
                   <div class="row">

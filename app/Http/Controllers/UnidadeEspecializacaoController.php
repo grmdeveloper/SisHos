@@ -31,14 +31,14 @@ class UnidadeEspecializacaoController extends Controller
     }
 
     public function store(Request $request){
+            foreach($request->especializacao_id as $esp_id){
+                $unidadesp = new UnidadeEspecializacao;
+                
+                $unidadesp->unidade_id = $request->unidade_id;
+                $unidadesp->especializacao_id = $esp_id;
 
-        for($x=0;$x<$request->input('qtd_vagas');$x++){
-            $unidadesp = new UnidadeEspecializacao($request->all());
-
-            $unidadesp->save();
-        }
-        
-
+                $unidadesp->save();
+            }
         return redirect(url('/unidadeespecializacao'));
     }
 
@@ -97,7 +97,9 @@ class UnidadeEspecializacaoController extends Controller
     function getUni($e){
         $esp = Especializacoes::where('nome','=',$e)->get()->first();
         $espId=$esp->id;
+        
         $a = UnidadeEspecializacao::with('unidade','especializacao')->where('especializacao_id','=',$espId)->get();
+        
         $b=[];
         $x=0;
         foreach($a as $vaga){

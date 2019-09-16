@@ -14,7 +14,7 @@ class UnidadesTableSeeder extends Seeder
 
 
         DB::table('unidades')->insert(['nome' => 'CEMCAM',
-                    "endereco" =>   "Av. União, 676"
+            "endereco" =>   "Av. União, 676"
         ]);
 
         DB::table('unidades')->insert(['nome' => 'Centro De Especialidade Odontologica De Mesquita',            
