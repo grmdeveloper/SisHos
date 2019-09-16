@@ -13,10 +13,7 @@ class UnidadeEspecializacoesTableSeeder extends Seeder
     public function run()
     {
         
-
-        \DB::table('unidade_especializacoes')->delete();
-        
-        \DB::table('unidade_especializacoes')->insert(array (
+        DB::table('unidade_especializacoes')->insert(array (
             0 => 
             array (
                 'id' => 1,
