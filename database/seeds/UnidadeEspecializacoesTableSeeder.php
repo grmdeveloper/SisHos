@@ -889,7 +889,7 @@ class UnidadeEspecializacoesTableSeeder extends Seeder
             109 => 
             array (
                 'id' => 110,
-                'unidade_id' => 59,
+                'unidade_id' => 17,
                 'especializacao_id' => 25,
                 'created_at' => '2019-09-16 14:39:11',
                 'updated_at' => '2019-09-16 14:39:11',
@@ -897,7 +897,7 @@ class UnidadeEspecializacoesTableSeeder extends Seeder
             110 => 
             array (
                 'id' => 111,
-                'unidade_id' => 59,
+                'unidade_id' => 17,
                 'especializacao_id' => 47,
                 'created_at' => '2019-09-16 14:39:11',
                 'updated_at' => '2019-09-16 14:39:11',
@@ -905,7 +905,7 @@ class UnidadeEspecializacoesTableSeeder extends Seeder
             111 => 
             array (
                 'id' => 112,
-                'unidade_id' => 60,
+                'unidade_id' => 18,
                 'especializacao_id' => 18,
                 'created_at' => '2019-09-16 14:40:11',
                 'updated_at' => '2019-09-16 14:40:11',
@@ -913,7 +913,7 @@ class UnidadeEspecializacoesTableSeeder extends Seeder
             112 => 
             array (
                 'id' => 113,
-                'unidade_id' => 60,
+                'unidade_id' => 18,
                 'especializacao_id' => 25,
                 'created_at' => '2019-09-16 14:40:11',
                 'updated_at' => '2019-09-16 14:40:11',
@@ -921,7 +921,7 @@ class UnidadeEspecializacoesTableSeeder extends Seeder
             113 => 
             array (
                 'id' => 114,
-                'unidade_id' => 61,
+                'unidade_id' => 19,
                 'especializacao_id' => 18,
                 'created_at' => '2019-09-16 14:40:38',
                 'updated_at' => '2019-09-16 14:40:38',
@@ -929,7 +929,7 @@ class UnidadeEspecializacoesTableSeeder extends Seeder
             114 => 
             array (
                 'id' => 115,
-                'unidade_id' => 61,
+                'unidade_id' => 19,
                 'especializacao_id' => 25,
                 'created_at' => '2019-09-16 14:40:38',
                 'updated_at' => '2019-09-16 14:40:38',
@@ -937,7 +937,7 @@ class UnidadeEspecializacoesTableSeeder extends Seeder
             115 => 
             array (
                 'id' => 116,
-                'unidade_id' => 62,
+                'unidade_id' => 20,
                 'especializacao_id' => 18,
                 'created_at' => '2019-09-16 14:41:19',
                 'updated_at' => '2019-09-16 14:41:19',
@@ -945,7 +945,7 @@ class UnidadeEspecializacoesTableSeeder extends Seeder
             116 => 
             array (
                 'id' => 117,
-                'unidade_id' => 62,
+                'unidade_id' => 20,
                 'especializacao_id' => 25,
                 'created_at' => '2019-09-16 14:41:19',
                 'updated_at' => '2019-09-16 14:41:19',
@@ -953,7 +953,7 @@ class UnidadeEspecializacoesTableSeeder extends Seeder
             117 => 
             array (
                 'id' => 118,
-                'unidade_id' => 63,
+                'unidade_id' => 21,
                 'especializacao_id' => 25,
                 'created_at' => '2019-09-16 14:41:32',
                 'updated_at' => '2019-09-16 14:41:32',
