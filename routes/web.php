@@ -11,23 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('auth/login');
-});
+
+
+Route::get('/','HomeController@app');
+Route::get('/home', 'HomeController@app')->name('home');
+
 
 Auth::routes();
 
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::resource('unidade',               'UnidadeController');
-Route::resource('especializacao',        'EspecializacaoController');
-Route::resource('unidadeespecializacao', 'UnidadeEspecializacaoController');
+Route::group(['middleware'=>['auth']],function(){
+	Route::resource('unidade',               'UnidadeController');
+	Route::resource('especializacao',        'EspecializacaoController');
+	Route::resource('unidadeespecializacao', 'UnidadeEspecializacaoController');
+});
 
 Route::get('getUnidades', 'UnidadeEspecializacaoController@getUnidades');
 Route::get('getDados/{u}',    'UnidadeEspecializacaoController@getDados');
-
 Route::get('getesp', 'UnidadeEspecializacaoController@getEsp');
 Route::get('getuni/{u}', 'UnidadeEspecializacaoController@getUni');
-

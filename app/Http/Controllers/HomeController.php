@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Especializacoes;
 
 class HomeController extends Controller
 {
@@ -13,9 +14,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
-
     /**
      * Show the application dashboard.
      *
@@ -25,4 +25,12 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function app()
+    {
+        $especializacoes = Especializacoes::all();
+
+        return view('ondetematendimento',compact('especializacoes'));
+    }
+
 }
