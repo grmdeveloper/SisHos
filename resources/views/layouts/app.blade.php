@@ -22,11 +22,12 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm"
+         style='background-image:url({{asset("background-top.png")}}); background-size:100%;'>
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                    <img src="{{asset('\otalogo.png')}}" width='180px'>
-                    <img src="{{asset('\icon.png')}}" width='100px' style="position:absolute; top:5px; right:25px; z-index:5;">
+                    <img src="{{asset('\otalogo.png')}}" width='180px' style="margin-top:10px;">
+                    <img src="{{asset('\icon.png')}}" width='100px' style="position:absolute; top:15px; right:25px; z-index:5;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
