@@ -23,7 +23,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm"
-         style='background-image:url({{asset("background-top.png")}}); background-size:100%;'>
+         style='background-image:url({{asset("background-top.png")}}); background-size:100%; background-repeat: no-repeat;'>
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
                     <img src="{{asset('\otalogo.png')}}" width='180px' style="margin-top:10px;">
