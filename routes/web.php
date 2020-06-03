@@ -15,7 +15,7 @@
 
 Route::get('/','HomeController@app');
 Route::get('/home', 'HomeController@app')->name('home');
-
+Route::get('/ota', 'HomeController@dashboard')->name('dashboard');
 
 Auth::routes();
 

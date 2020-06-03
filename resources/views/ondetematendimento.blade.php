@@ -44,7 +44,7 @@
   var items=[]; 
   var esps;
 
-  var infoScreen,  KEY = "AIzaSyDcdW2PsrS1fbsXKmZ6P9Ii8zub5FDu3WQ";
+  var infoScreen,  KEY = "unset";
 
   var selecionado;
   
@@ -149,8 +149,7 @@
   }
 
 
-var maps_url=[], endFinal=[];
-  
+  var maps_url=[], endFinal=[];
 
   //push em maps_url
   //PROCESSO 1
@@ -348,7 +347,7 @@ var maps_url=[], endFinal=[];
 
 </script>
   
-<script onload='setTimeout(function(){ initMap(); },2000)' id="map" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDcdW2PsrS1fbsXKmZ6P9Ii8zub5FDu3WQ"></script >
+<script onload='setTimeout(function(){ initMap(); },2000)' id="map" src="http://maps.googleapis.com/maps/api/js?key=unset"></script >
 
 <style type="text/css">
 	.badge{

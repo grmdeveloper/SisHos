@@ -33,4 +33,8 @@ class HomeController extends Controller
         return view('ondetematendimento',compact('especializacoes'));
     }
 
+    public function dashboard (){
+        return view('welcome');
+    }
+
 }
